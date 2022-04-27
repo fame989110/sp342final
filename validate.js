@@ -9,11 +9,13 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  if (!isNaN(num)) {
+	  if (num >=0 || num <=5){
+		  return true;
+	  }
   }
+  return false;
+  
 }
 
 function validateForm(){
